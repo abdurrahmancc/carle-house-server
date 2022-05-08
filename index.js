@@ -37,6 +37,7 @@ const client = new MongoClient(uri, {
   serverApi: ServerApiVersion.v1,
 });
 
+// start api function
 const run = async () => {
   try {
     await client.connect();
