@@ -45,9 +45,7 @@ const run = async () => {
     //auth
     app.post("/login", async (req, res) => {
       const email = req.body;
-      // console.log(email);
       const token = jwt.sign(email, process.env.SECRETE_TOKEN_ACCESS, { expiresIn: "1d" });
-      // console.log(token);
       res.send({ token });
     });
 
